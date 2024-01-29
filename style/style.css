@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
+
+:root {
+    --titleFont: 'Playfair Display', serif;
+    --bodyFont: 'Lora', serif;
+    --whiteColor: #FFFFFF;
+    --BlackColor: #000000;
+    --spaceBelow: 10rem;
+    --element-bg: #6C6C6C;
+    --border-radius: 15px;
+    --pink-bg: rgb(233, 201, 201);
+    --blue-bg: rgb(169, 201, 227);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--element-bg);
+}
+
+ul,
+li,
+h1,
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
