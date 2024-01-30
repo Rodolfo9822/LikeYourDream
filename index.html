@@ -16,23 +16,34 @@
 
 <body>
     <header class="hero">
-        <nav class="nav">
+        <nav class="nav nav__container">
             <a class="nav__link" href="index.html">
                 <h1 class="nav__web-name">LikeYourDream</h1>
             </a>
             <a class="nav__link" href="warehouse.html">
-                <h2 class="nav__warehouse"><span></span>warehouse</h2>
+                <h2 class="nav__warehouse"><span class="nav__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-library-photo" width="24" height="24"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#e9c9c9" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M7 3m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                            <path
+                                d="M4.012 7.26a2.005 2.005 0 0 0 -1.012 1.737v10c0 1.1 .9 2 2 2h10c.75 0 1.158 -.385 1.5 -1" />
+                            <path d="M17 7h.01" />
+                            <path d="M7 13l3.644 -3.644a1.21 1.21 0 0 1 1.712 0l3.644 3.644" />
+                            <path d="M15 12l1.644 -1.644a1.21 1.21 0 0 1 1.712 0l2.644 2.644" />
+                        </svg></span>WareHouse</h2>
             </a>
         </nav>
-        <section class="hero__box">
+        <section class="hero__box hero__container">
             <div class="hero__phrase-box">
-                <p class="hero__phrase">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et accusamus eos aut
-                    ipsam fuga optio
-                    possimus nesciunt quasi dignissimos, ad repellat reprehenderit cumque, reiciendis explicabo
-                    repudiandae incidunt delectus vitae? Sint.</p>
+                <p class="hero__phrase">
+                    Unlock Creativity, Unleash Freedom: Your Source for Copyright-Free Imagery!
+                </p>
             </div>
-            <div class="hero__search-box">
-                <input class="hero__searchBar" type="text">
+            <form class="hero__search-box">
+                <input class="hero__searchBar" type="text" placeholder="Search High-Resolution Images">
                 <button class="hero__button"><svg xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-photo-search" width="32" height="32" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -43,7 +54,7 @@
                         <path d="M20.2 20.2l1.8 1.8" />
                         <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l2 2" />
                     </svg></button>
-            </div>
+            </form>
         </section>
     </header>
 
