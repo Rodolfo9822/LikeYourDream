@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
 
 :root {
-    --titleFont: 'Playfair Display', serif;
-    --bodyFont: 'Lora', serif;
-    --whiteColor: #FFFFFF;
-    --BlackColor: #000000;
-    --spaceBelow: 10rem;
-    --element-bg: #6C6C6C;
-    --border-radius: 15px;
-    --pink-bg: #e9c9c9;
-    --blue-bg: rgb(169, 201, 227);
+    --font: 'Playfair Display', serif;
+    --body_font: 'Lora', serif;
+    --white_color: #FFFFFF;
+    --Black_color: #000000;
+    --element_bg: #6C6C6C;
+    --border_radius: 10px;
+    --pink_bg: #e9c9c9;
+    --blue_bg: rgb(169, 201, 227);
+    --default_margin: 5rem;
 }
 
 html {
@@ -26,8 +25,8 @@ html {
 
 body {
     font-size: 1.6rem;
-    background-color: var(--element-bg);
-    font-family: var(--bodyFont);
+    background-color: var(--element_bg);
+    font-family: var(--font);
     line-height: 1.5;
 }
 
@@ -64,7 +63,7 @@ h2 {
     background-size: cover;
     background-position: center center;
     height: 60rem;
-    color: var(--whiteColor);
+    color: var(--white_color);
     padding-top: 5rem;
     position: relative;
 }
@@ -97,23 +96,28 @@ h2 {
 }
 
 .nav__link {
-    font-family: var(--titleFont);
     font-weight: 600;
-    background-image: linear-gradient(to bottom, var(--blue-bg) 0%, var(--pink-bg) 100%);
+    background-image: linear-gradient(to bottom, var(--blue_bg) 0%, var(--pink_bg) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .nav__web-name {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+}
+
+@media (min-width: 1400px) {
+    .nav__web-name {
+        font-size: 2.4rem;
+    }
 }
 
 .nav__warehouse {
     font-size: 2rem;
     display: flex;
-    gap: 0.2rem;
-
+    gap: 0.3rem;
 }
+
 
 .nav__icon {
     transition: transform .3s ease;
@@ -169,7 +173,7 @@ h2 {
     width: 90%;
     height: 90%;
     position: absolute;
-    border-radius: 20px;
+    border-radius: calc(var(--border_radius) *2);
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -206,18 +210,51 @@ h2 {
     font-size: 1.8rem;
     padding: 1rem 2rem;
     width: 40rem;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    color: var(--whiteColor);
+    border-top-left-radius: var(--border_radius);
+    border-bottom-left-radius: var(--border_radius);
+    color: var(--white_color);
     box-shadow: -10px 15px 10px 0px rgba(0, 0, 0, .5);
 }
 
 .hero__searchBar::placeholder {
-    color: var(--whiteColor);
+    color: var(--white_color);
 }
 
 .hero__button {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: var(--border_radius);
+    border-bottom-right-radius: var(--border_radius);
     cursor: pointer;
+}
+
+
+.category {
+    width: min(90%, 140rem);
+    margin: var(--default_margin) auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+@media (min-width: 1240px) {
+    .category {
+        flex-wrap: nowrap;
+    }
+}
+
+.category__link {
+    color: var(--white_color);
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 1.5rem 2rem;
+    border-radius: var(--border_radius);
+    box-shadow: inset -6px -8px 2px 0px rgba(0, 0, 0, .5);
+    transition: all 0.3s ease;
+}
+
+.category__link:active {
+    box-shadow: inset -1px -1px 1px 0px rgba(0, 0, 0, .4);
+    transform: translate(2px, 2px);
 }
