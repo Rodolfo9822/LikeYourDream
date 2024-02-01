@@ -244,6 +244,13 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 2rem;
+    transition: all .3s ease-out;
+    padding: 3rem 0rem;
+}
+
+.category:hover {
+    box-shadow: 6px 8px 8px 0px rgba(0, 0, 0, .2);
+
 }
 
 @media (min-width: 1240px) {
