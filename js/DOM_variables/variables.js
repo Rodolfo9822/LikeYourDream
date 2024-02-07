@@ -1,0 +1,1 @@
+export const images__bunch = document.querySelectorAll(".images__bunch");
