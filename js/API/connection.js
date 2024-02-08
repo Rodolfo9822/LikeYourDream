@@ -23,6 +23,17 @@ export class API {
         const response = await request.json()
         return response;
     }
+
+    async category_request(category) {
+        const response = await fetch(
+            `https://api.pexels.com/v1/search?query=${this.query}&per_page=${80}`,
+            {
+                headers: { 'Authorization': this.key }
+            })
+        const bunch = await response.json()
+        return bunch;
+    }
+
 }
 
 

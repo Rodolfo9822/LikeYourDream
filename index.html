@@ -43,30 +43,35 @@
                 </p>
             </div>
             <form class="hero__search-box">
-                <input class="hero__searchBar" type="text" placeholder="Search High-Resolution Images">
-                <button class="hero__button"><svg xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-photo-search" width="32" height="32" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <input id="search_input" class="hero__searchBar" type="text"
+                    placeholder="Search High-Resolution Images">
+
+
+                <a class="hero__button" id="search_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="test icon icon-tabler icon-tabler-photo-search"
+                        width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M15 8h.01" />
                         <path d="M11.5 21h-5.5a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5.5" />
                         <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                         <path d="M20.2 20.2l1.8 1.8" />
                         <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l2 2" />
-                    </svg></button>
+                    </svg>
+                </a>
             </form>
         </section>
     </header>
 
-    <nav class="category">
-        <a href="#" class="category__link">City</a>
-        <a href="#" class="category__link">Art</a>
-        <a href="#" class="category__link">Drink</a>
-        <a href="#" class="category__link">Landscape</a>
-        <a href="#" class="category__link">Animals</a>
-        <a href="#" class="category__link">plants</a>
-        <a href="#" class="category__link">Wallpaper</a>
-        <a href="#" class="category__link">photography</a>
+    <nav class="category" id="category">
+        <a href="category.html?name=city" class="category__link">City</a>
+        <a href="category.html?name=art" class="category__link">Art</a>
+        <a href="category.html?name=drink" class="category__link">Drink</a>
+        <a href="category.html?name=landscape" class="category__link">Landscape</a>
+        <a href="category.html?name=animals" class="category__link">Animals</a>
+        <a href="category.html?name=plants" class="category__link">plants</a>
+        <a href="category.html?name=wallpaper" class="category__link">Wallpaper</a>
+        <a href="category.html?name=photography" class="category__link">photography</a>
     </nav>
 
     <main class="images">
