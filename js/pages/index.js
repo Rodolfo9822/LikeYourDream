@@ -1,15 +1,14 @@
 import { API } from "../API/connection.js"
-import { images__bunch, search_button, search_input } from "../DOM_variables/variables.js"
+import { images__bunch, search_button, search_input, save_func } from "../DOM_variables/variables.js"
+import { to_save } from "../animations/card.js"
 
 export const index_code = () => {
     const api = new API();
-    let test = 0;
+    let index = 0;
     const categories = ["city", "art", "drink", "landscape", "animals", "plants", "wallpaper", "photography "]
 
     /* code for search bar button to look for any images */
     search_button.addEventListener("click", evt => {
-
-
         if (evt.target.classList.contains("hero__button")) {
             take_user_to(evt.target);
         }
@@ -19,8 +18,12 @@ export const index_code = () => {
     })
 
     const take_user_to = evt => {
-        const request = search_input.value
-        evt.setAttribute("href", `category.html?name=${request}`)
+        const query = search_input.value
+        if (query) {
+            evt.setAttribute("href", `category.html?name=${query}`);
+            return
+        }
+        console.log("it's empty");
     }
 
     /* Calling the API to get images to use into the sections */
@@ -40,22 +43,22 @@ export const index_code = () => {
         const [img1, img2] = images["photos"];
         const [group1, group2] = images__bunch;
 
-        group1.appendChild(template(img1, category));
-        group2.appendChild(template(img2, category));
-        test += 1;
+        group1.appendChild(template(img1, category, "sav_func_bunc1"));
+        group2.appendChild(template(img2, category, "sav_func_bunc2"));
+        index += 1;
     }
 
-    const template = (img_url, category) => {
+    const template = (img_url, category, extra) => {
         const div = document.createElement("div");
-        div.classList.add("images__box--style");
-        if (test === 2 || test === 3) {
+        div.classList.add("images__box--style", extra);
+        if (index === 2 || index === 3) {
             div.classList.add("complete__height");
         }
         else {
             div.classList.add("images__box");
         }
         const img = document.createElement("img");
-        img.classList.add("images__img");
+        img.classList.add("img_selected")
         img.alt = `To belong to ${category}, made by ${img_url["photographer_url"]}`;
         img.src = img_url["src"]["landscape"];
         img.setAttribute("name", img_url["id"])
@@ -63,10 +66,8 @@ export const index_code = () => {
 
         return div;
     }
-
     getting_images();
-
-
+    save_func.addEventListener("mouseover", to_save);
 }
 
 

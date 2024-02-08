@@ -1,6 +1,6 @@
 import { API } from "../API/connection.js"
 import { images_category } from "../DOM_variables/variables.js"
-
+import { to_save } from "../animations/card.js"
 export const category_page = () => {
     const api = new API();
 
@@ -10,7 +10,9 @@ export const category_page = () => {
         group_images.forEach(image => {
             const { id, photographer, src, } = image
             const div = document.createElement("div");
+            div.classList.add("searched_box");
             const img = document.createElement("img");
+            img.classList.add("searched_images", "img_selected");
             img.src = src["landscape"];
             img.alt = `It made by ${photographer}`;
             img.id = id;
@@ -27,5 +29,6 @@ export const category_page = () => {
     }
 
     put_images();
+    images_category.addEventListener("mouseover", to_save);
 }
 
