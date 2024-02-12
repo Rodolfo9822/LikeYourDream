@@ -310,10 +310,12 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin: 2rem auto 0rem auto;
+    position: relative;
 }
 
 .images__box--style {
     height: 20rem;
+    position: relative;
 }
 
 .images__img {
@@ -325,10 +327,6 @@ h2 {
         grid-template-columns: repeat(6, 1fr);
 
         width: min(95%, 120rem);
-    }
-
-    .images__box--style {
-        height: 20rem;
     }
 
     .complete__height {
@@ -385,41 +383,23 @@ h2 {
     border-radius: var(--border_radius);
 }
 
+
 .icon-style {
     margin: 0 3rem 3rem 0;
     border-radius: 50%;
-    padding: 0.6rem;
+    width: 4rem;
+    height: 4rem;
     border: none;
-    cursor: pointer;
     background-color: var(--white_color);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform .1s ease;
 }
 
-.jumping {
-    animation-name: something;
-    animation-duration: 1.5s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
+.icon-style:active {
+    transform: scale(0.80);
 }
-
-@keyframes something {
-    0% {
-        transform: scale(1);
-
-    }
-
-
-    50% {
-        transform: scale(0.40);
-    }
-
-    100% {
-        transform: scale(0.10);
-    }
-}
-
 
 
 .footer {
@@ -475,4 +455,25 @@ h2 {
 
 .searched_images {
     border-radius: var(--border_radius);
+}
+
+.alert-message {
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    transition: all .5s ease-in;
+    border-radius: var(--border_radius);
+
+}
+
+.red_alert {
+    background-color: #FF8080;
+}
+
+.green_alert {
+    background-color: #CDFADB;
 }

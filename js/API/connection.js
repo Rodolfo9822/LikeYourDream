@@ -33,7 +33,6 @@ export class API {
         const bunch = await response.json()
         return bunch;
     }
-
 }
 
 

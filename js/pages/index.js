@@ -1,5 +1,5 @@
 import { API } from "../API/connection.js"
-import { images__bunch, search_button, search_input, save_func } from "../DOM_variables/variables.js"
+import { search_button, search_input, save_func, sav_func_bunc1, sav_func_bunc2 } from "../DOM_variables/variables.js"
 import { to_save } from "../animations/card.js"
 
 export const index_code = () => {
@@ -41,16 +41,14 @@ export const index_code = () => {
     const building_images = async (category, data) => {
         const images = await data
         const [img1, img2] = images["photos"];
-        const [group1, group2] = images__bunch;
-
-        group1.appendChild(template(img1, category, "sav_func_bunc1"));
-        group2.appendChild(template(img2, category, "sav_func_bunc2"));
+        sav_func_bunc1.appendChild(template(img1, category));
+        sav_func_bunc2.appendChild(template(img2, category));
         index += 1;
     }
 
-    const template = (img_url, category, extra) => {
+    const template = (img_url, category) => {
         const div = document.createElement("div");
-        div.classList.add("images__box--style", extra);
+        div.classList.add("images__box--style");
         if (index === 2 || index === 3) {
             div.classList.add("complete__height");
         }
@@ -58,16 +56,18 @@ export const index_code = () => {
             div.classList.add("images__box");
         }
         const img = document.createElement("img");
-        img.classList.add("img_selected")
+        img.classList.add("img_selected", "images__img");
         img.alt = `To belong to ${category}, made by ${img_url["photographer_url"]}`;
         img.src = img_url["src"]["landscape"];
-        img.setAttribute("name", img_url["id"])
+        img.setAttribute("name", img_url["id"]);
         div.appendChild(img)
 
         return div;
     }
     getting_images();
     save_func.addEventListener("mouseover", to_save);
+    sav_func_bunc1.addEventListener("mouseover", to_save);
+    sav_func_bunc2.addEventListener("mouseover", to_save);
 }
 
 
