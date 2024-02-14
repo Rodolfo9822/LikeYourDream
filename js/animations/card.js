@@ -58,7 +58,7 @@ export const to_save = evt => {
         const img = evt.target;
 
         const div = building_shadow(container, img);
-        div.onmouseout = function () {
+        div.onmouseleave = function () {
             removing(container)
         }
     }

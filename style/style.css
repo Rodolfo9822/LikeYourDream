@@ -111,7 +111,6 @@ h2 {
 
 .nav__link {
     font-weight: 600;
-
 }
 
 .nav__web-name {
@@ -401,6 +400,19 @@ h2 {
     transform: scale(0.80);
 }
 
+.butto-removes {
+    font-size: 1.8rem;
+    padding: .7rem 1.5rem;
+    border-radius: var(--border_radius);
+    background-color: white;
+    border: none;
+    margin: 0 3rem 2rem 0;
+    cursor: pointer;
+}
+
+.butto-removes:active {
+    transform: scale(0.95);
+}
 
 .footer {
     margin-top: calc(var(--default_margin) * 2);
@@ -476,4 +488,21 @@ h2 {
 
 .green_alert {
     background-color: #CDFADB;
+}
+
+.decoration {
+    width: 120rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.decoration__text {
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.decoration__img {
+    width: 40rem;
 }
