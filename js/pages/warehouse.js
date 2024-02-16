@@ -51,17 +51,22 @@ export const your_likes = () => {
         });
         return
     }
+
     const div_thinking = document.createElement("div");
     div_thinking.classList.add("decoration");
+
     const img_thinking = document.createElement("img");
     img_thinking.src = "../img/thinking.png"
     img_thinking.classList.add("decoration__img");
-    img_thinking.alt = "a decoration to know there aren't images"
+    img_thinking.alt = "a decoration to know there aren't images";
+
     const text_thinking = document.createElement("text");
     text_thinking.textContent = "Haven't you added images, yet?"
     text_thinking.classList.add("decoration__text");
+
     div_thinking.appendChild(text_thinking);
     div_thinking.appendChild(img_thinking);
+
     warehouse.appendChild(div_thinking)
 }
 

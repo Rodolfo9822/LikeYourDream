@@ -17,7 +17,6 @@ const building_shadow = (container, img) => {
     icon.classList.add("icon-style");
     icon.onclick = function () {
         save_images(img);
-
     }
     div.appendChild(icon);
     container.appendChild(div);

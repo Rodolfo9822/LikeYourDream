@@ -5,14 +5,7 @@ const limit = slideshow_box.length
 
 
 export const slideshow = () => {
-
-}
-
-
-
-/* 
-This is the code to make the slideshow automatic 
- for (let index = 0; index < limit; index++) {
+    for (let index = 0; index < limit; index++) {
         slideshow_box[index].style.display = "none";
     }
 
@@ -26,5 +19,8 @@ This is the code to make the slideshow automatic
         position++;
     }
 
-    setTimeout(slideshow, 5000);
-*/
+    setTimeout(slideshow, 6000);
+}
+
+
+

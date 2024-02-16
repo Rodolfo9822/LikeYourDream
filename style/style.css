@@ -505,7 +505,7 @@ h2 {
 /* ======================== slideshow ======================== */
 
 .slideshow {
-    width: 80rem;
+    width: min(80rem, 100%);
     margin: 0rem auto;
 }
 
@@ -516,7 +516,7 @@ h2 {
 }
 
 .slideshow__container {
-    height: 35rem;
+    height: min(35rem, 100%);
     overflow: hidden;
     display: flex;
     margin: 3rem auto;
@@ -534,7 +534,7 @@ h2 {
     animation-name: slideshow;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
-    animation-delay: 3.5s;
+    animation-delay: 2.8s;
 }
 
 @keyframes slideshow {

@@ -1,5 +1,5 @@
 import { API } from "../API/connection.js"
-import { search_button, search_input, save_func, sav_func_bunc1, sav_func_bunc2 } from "../DOM_variables/variables.js"
+import { search_button, search_input, sav_func_bunc1, sav_func_bunc2, sav_func_bunc3, sav_func_bunc4 } from "../DOM_variables/variables.js"
 import { to_save } from "../animations/card.js"
 import { slideshow } from "../animations/slideshow.js"
 
@@ -30,7 +30,7 @@ export const index_code = () => {
     /* Calling the API to get images to use into the sections */
 
     const getting_images = () => {
-        api.set_many_images(2);
+        api.set_many_images(4);
 
         categories.forEach(category => {
             api.set_query(category);
@@ -40,10 +40,12 @@ export const index_code = () => {
     }
 
     const building_images = async (category, data) => {
-        const images = await data
-        const [img1, img2] = images["photos"];
+        const images = await data;
+        const [img1, img2, img3, img4] = images["photos"];
         sav_func_bunc1.appendChild(template(img1, category));
         sav_func_bunc2.appendChild(template(img2, category));
+        sav_func_bunc3.appendChild(template(img3, category));
+        sav_func_bunc4.appendChild(template(img4, category));
         index += 1;
     }
 
@@ -65,12 +67,13 @@ export const index_code = () => {
 
         return div;
     }
-    slideshow();
-    /*
+
     getting_images();
-     save_func.addEventListener("mouseover", to_save); 
-     sav_func_bunc1.addEventListener("mouseover", to_save);
-    sav_func_bunc2.addEventListener("mouseover", to_save);*/
+    sav_func_bunc1.addEventListener("mouseover", to_save);
+    sav_func_bunc2.addEventListener("mouseover", to_save);
+    sav_func_bunc3.addEventListener("mouseover", to_save);
+    sav_func_bunc4.addEventListener("mouseover", to_save);
+    slideshow();
 }
 
 
