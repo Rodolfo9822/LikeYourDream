@@ -505,7 +505,7 @@ h2 {
 /* ======================== slideshow ======================== */
 
 .slideshow {
-    width: 100rem;
+    width: 80rem;
     margin: 0rem auto;
 }
 
@@ -516,8 +516,8 @@ h2 {
 }
 
 .slideshow__container {
-    width: 80rem;
-    height: 40rem;
+    height: 35rem;
+    overflow: hidden;
     display: flex;
     margin: 3rem auto;
 
@@ -525,22 +525,31 @@ h2 {
 
 .slideshow__box {
     display: none;
+    margin: 1rem;
 }
 
 .slideshow__box--style {
-    box-shadow: 8px 8px 1px 4px var(--Black_color);
+    box-shadow: 6px 6px 1px 4px var(--Black_color);
     border-radius: var(--border_radius);
     animation-name: slideshow;
-    animation-duration: 2s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3.5s;
 }
 
 @keyframes slideshow {
-    from {
-        opacity: .8
+    0% {
+        transform: translateX(0rem);
     }
 
-    to {
-        opacity: 1
+    50% {
+
+        transform: translateX(0rem);
+    }
+
+    50% {
+
+        transform: translateX(-120rem);
     }
 }
 
