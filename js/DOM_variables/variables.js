@@ -7,4 +7,4 @@ export const warehouse = document.querySelector("#warehouse");
 export const save_func = document.querySelector("#sav_func_carrousel");
 export const sav_func_bunc1 = document.querySelector("#sav_func_bunc1");
 export const sav_func_bunc2 = document.querySelector("#sav_func_bunc2");
-
+export const slideshow_box = document.querySelectorAll(".slideshow__box");

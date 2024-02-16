@@ -284,11 +284,6 @@ h2 {
     padding: 0rem 5rem;
 }
 
-.images__title {
-    font-size: 2.6rem;
-    text-transform: capitalize;
-    font-weight: 600;
-}
 
 .images__test {
     display: flex;
@@ -505,4 +500,50 @@ h2 {
 
 .decoration__img {
     width: 40rem;
+}
+
+/* ======================== slideshow ======================== */
+
+.slideshow {
+    width: 100rem;
+    margin: 0rem auto;
+}
+
+.slideshow__title {
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.slideshow__container {
+    width: 80rem;
+    height: 40rem;
+    display: flex;
+    margin: 3rem auto;
+
+}
+
+.slideshow__box {
+    display: none;
+}
+
+.slideshow__box--style {
+    box-shadow: 8px 8px 1px 4px var(--Black_color);
+    border-radius: var(--border_radius);
+    animation-name: slideshow;
+    animation-duration: 2s;
+}
+
+@keyframes slideshow {
+    from {
+        opacity: .8
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.slideshow__img {
+    border-radius: var(--border_radius);
 }

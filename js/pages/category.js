@@ -14,7 +14,7 @@ export const category_page = () => {
             const img = document.createElement("img");
             img.classList.add("searched_images", "img_selected");
             img.src = src["landscape"];
-            img.alt = `It made by ${photographer}`;
+            img.alt = `Image made by ${photographer}`;
             img.setAttribute("name", id);
             div.appendChild(img);
             images_category.appendChild(div)

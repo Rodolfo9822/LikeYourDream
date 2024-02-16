@@ -1,6 +1,7 @@
 import { API } from "../API/connection.js"
 import { search_button, search_input, save_func, sav_func_bunc1, sav_func_bunc2 } from "../DOM_variables/variables.js"
 import { to_save } from "../animations/card.js"
+import { slideshow } from "../animations/slideshow.js"
 
 export const index_code = () => {
     const api = new API();
@@ -64,10 +65,12 @@ export const index_code = () => {
 
         return div;
     }
+    slideshow();
+    /*
     getting_images();
-    save_func.addEventListener("mouseover", to_save);
-    sav_func_bunc1.addEventListener("mouseover", to_save);
-    sav_func_bunc2.addEventListener("mouseover", to_save);
+     save_func.addEventListener("mouseover", to_save); 
+     sav_func_bunc1.addEventListener("mouseover", to_save);
+    sav_func_bunc2.addEventListener("mouseover", to_save);*/
 }
 
 
