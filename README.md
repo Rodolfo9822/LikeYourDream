@@ -5,9 +5,9 @@
 LikeYourDream allows people to look for images that are actually free of copyright.
 
 ## Menu
-[How does the user look for free images](#how-does-the-user-look-for-free-images)
-[How to utilize the project? ](#how-to-utilize-the-project?)
-[What does the project work](#what-does-the-project-work)
+- [How does the user look for free images](#how-does-the-user-look-for-free-images)
+- [How to utilize the project? ](#how-to-utilize-the-project?)
+- [What does the project work](#what-does-the-project-work)
 
 ## How does the user look for free images? 
 
